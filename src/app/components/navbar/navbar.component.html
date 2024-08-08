@@ -1,0 +1,15 @@
+<nav class="bg-gray-800 text-white p-4">
+  <div class="container mx-auto flex items-center justify-between">
+    <div class="text-xl font-bold">
+      <a routerLink="/dashboard" class="hover:text-gray-400">MyApp</a>
+    </div>
+    <div class="flex space-x-4">
+      <button (click)="switchLanguage('en')" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
+        English
+      </button>
+      <button (click)="switchLanguage('es')" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
+        Español
+      </button>
+    </div>
+  </div>
+</nav>

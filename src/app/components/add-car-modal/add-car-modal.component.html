@@ -1,0 +1,89 @@
+<div
+  class="fixed inset-0 bg-black bg-opacity-50 z-50"
+  *ngIf="isOpen"
+  tabindex="0"
+  (click)="close()"
+  (keyup.enter)="close()"
+  (keyup.space)="close()"
+></div>
+
+<div
+  class="fixed inset-0 flex items-center justify-center z-50"
+  *ngIf="isOpen"
+  tabindex="0"
+  (click)="$event.stopPropagation()"
+  (keyup.enter)="$event.stopPropagation()"
+  (keyup.space)="$event.stopPropagation()"
+>
+  <div class="modal-content bg-white rounded-lg shadow-lg max-w-lg mx-4 p-6">
+    <h2 class="text-2xl font-bold mb-4">Add Car</h2>
+    <form [formGroup]="carForm" (ngSubmit)="onSubmit()">
+      
+      <div class="mb-4">
+        <label for="make" class="block text-sm font-medium text-gray-700">Make</label>
+        <input
+          id="make"
+          formControlName="make"
+          type="text"
+          class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+        />
+        <div *ngIf="carForm.get('make')?.invalid && carForm.get('make')?.touched" class="text-red-600 text-sm mt-1">
+          Make is required.
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label for="model" class="block text-sm font-medium text-gray-700">Model</label>
+        <input
+          id="model"
+          formControlName="model"
+          type="text"
+          class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+        />
+        <div *ngIf="carForm.get('model')?.invalid && carForm.get('model')?.touched" class="text-red-600 text-sm mt-1">
+          Model is required.
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label for="year" class="block text-sm font-medium text-gray-700">Year</label>
+        <input
+          id="year"
+          formControlName="year"
+          type="text"
+          class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+        />
+        <div *ngIf="carForm.get('year')?.invalid && carForm.get('year')?.touched" class="text-red-600 text-sm mt-1">
+          Year is required and must be a 4-digit number.
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label for="color" class="block text-sm font-medium text-gray-700">Color</label>
+        <input
+          id="color"
+          formControlName="color"
+          type="text"
+          class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+        />
+      </div>
+
+      <div class="flex justify-end space-x-2">
+        <button
+          type="button"
+          (click)="close()"
+          class="bg-gray-300 text-gray-700 py-2 px-4 rounded hover:bg-gray-400"
+        >
+          Cancel
+        </button>
+        <button
+          type="submit"
+          class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+          [disabled]="carForm.invalid"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

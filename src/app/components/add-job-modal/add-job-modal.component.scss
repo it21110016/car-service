@@ -1,0 +1,62 @@
+/* Custom styles for the modal component */
+.modal-content {
+    @apply bg-white rounded-lg shadow-lg p-6;
+    max-width: 100%;
+  
+    @media (min-width: 640px) {
+      @apply max-w-lg; // For small screens and up
+    }
+  
+    @media (min-width: 768px) {
+      @apply max-w-xl; // For medium screens and up
+    }
+  
+    @media (min-width: 1024px) {
+      @apply max-w-2xl; // For large screens and up
+    }
+  
+    @media (min-width: 1280px) {
+      @apply max-w-3xl; // For extra large screens and up
+    }
+  }
+  
+  /* Responsive styles for input fields */
+  input, select {
+    @apply mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50;
+  
+    @media (max-width: 640px) {
+      @apply text-sm;
+    }
+  }
+  
+  /* Responsive styles for buttons */
+  button {
+    @apply py-2 px-4 rounded transition duration-300;
+  
+    &.bg-gray-300 {
+      @apply text-gray-700 hover:bg-gray-400;
+    }
+  
+    &.bg-blue-500 {
+      @apply text-white hover:bg-blue-600;
+    }
+  }
+  
+  /* Responsive styles for form */
+  form {
+    @apply flex flex-col space-y-4;
+  
+    @media (min-width: 768px) {
+      @apply space-y-6;
+    }
+  }
+  
+  /* Responsive styles for labels */
+  label {
+    @apply block text-sm font-medium text-gray-700;
+  
+    @media (max-width: 640px) {
+      @apply text-xs;
+    }
+  }
+  

@@ -1,0 +1,21 @@
+{
+  "DASHBOARD": "Tablero",
+  "CARS_LIST": "Lista de coches",
+  "CARS_IN_SERVICE_CENTER": "Coches en el centro de servicio",
+  "JOBS_IN_PROGRESS": "Trabajos en progreso",
+  "JOBS_STATUS": "Estado de los trabajos",
+  "ADD_JOB": "Agregar trabajo",
+  "JOB_ID": "ID de trabajo",
+  "CAR_ID": "ID del coche",
+  "DESCRIPTION": "Descripción",
+  "STATUS": "Estado",
+  "ACTIONS": "Acciones",
+  "COMPLETE": "Completar",
+  "CARS": "Coches",
+  "ADD_CAR": "Añadir Coche",
+  "ID": "ID",
+  "MAKE": "Marca",
+  "MODEL": "Modelo",
+  "YEAR": "Año",
+  "COLOR": "Color"
+}

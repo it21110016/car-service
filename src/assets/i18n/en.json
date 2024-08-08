@@ -1,0 +1,21 @@
+{
+  "DASHBOARD": "Dashboard",
+  "CARS_LIST": "Cars List",
+  "CARS_IN_SERVICE_CENTER": "Cars in Service Center",
+  "JOBS_IN_PROGRESS": "Jobs in Progress",
+  "JOBS_STATUS": "Jobs Status",
+  "ADD_JOB": "Add Job",
+  "JOB_ID": "Job ID",
+  "CAR_ID": "Car ID",
+  "DESCRIPTION": "Description",
+  "STATUS": "Status",
+  "ACTIONS": "Actions",
+  "COMPLETE": "Complete",
+  "CARS": "Cars",
+  "ADD_CAR": "Add Car",
+  "ID": "ID",
+  "MAKE": "Make",
+  "MODEL": "Model",
+  "YEAR": "Year",
+  "COLOR": "Color"
+}

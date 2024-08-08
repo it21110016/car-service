@@ -1,0 +1,58 @@
+{
+  "cars": [
+    {
+      "id": "4dfd",
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": "2020",
+      "color": "Blue"
+    },
+    {
+      "id": "99d7",
+      "make": "Honda",
+      "model": "Civic",
+      "year": "2019",
+      "color": "Black"
+    },
+    {
+      "id": "7e3a",
+      "make": "Ford",
+      "model": "Mustang",
+      "year": "2018",
+      "color": "Red"
+    },
+    {
+      "id": "527e",
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "year": "2021",
+      "color": "White"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "9639",
+      "carId": "4dfd",
+      "description": "Battery Replacement",
+      "status": "In Progress"
+    },
+    {
+      "id": "fcc4",
+      "carId": "7e3a",
+      "description": "Brake Inspection",
+      "status": "Completed"
+    },
+    {
+      "id": "a95e",
+      "carId": "527e",
+      "description": "Tire Rotation",
+      "status": "In Progress"
+    },
+    {
+      "id": "f179",
+      "carId": "99d7",
+      "description": "Transmission Repair",
+      "status": "In Progress"
+    }
+  ]
+}

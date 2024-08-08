@@ -1,0 +1,79 @@
+<div
+  class="fixed inset-0 bg-black bg-opacity-50 z-50"
+  *ngIf="isOpen"
+  tabindex="0"
+  (click)="close()"
+  (keyup.enter)="close()"
+  (keyup.space)="close()"
+></div>
+
+<div
+  class="fixed inset-0 flex items-center justify-center z-50"
+  *ngIf="isOpen"
+  tabindex="0"
+  (click)="$event.stopPropagation()"
+  (keyup.enter)="$event.stopPropagation()"
+  (keyup.space)="$event.stopPropagation()"
+>
+  <div class="bg-white rounded-lg shadow-lg max-w-full sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl mx-4 p-6">
+    <h2 class="text-2xl font-bold mb-4">Add Job</h2>
+    <form [formGroup]="jobForm" (ngSubmit)="onSubmit()">
+      <div class="mb-4">
+        <label for="carId" class="block text-sm font-medium text-gray-700">Car ID</label>
+        <select
+          id="carId"
+          formControlName="carId"
+          class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+        >
+          <option *ngFor="let car of cars" [value]="car.id">{{ car.id }} - {{ car.make }} {{ car.model }}</option>
+        </select>
+        <div *ngIf="jobForm.get('carId')?.invalid && jobForm.get('carId')?.touched" class="text-red-600 text-sm mt-1">
+          Car ID is required.
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label for="jobDescription" class="block text-sm font-medium text-gray-700">Job Description</label>
+        <input
+          id="jobDescription"
+          formControlName="description"
+          type="text"
+          class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+        />
+        <div *ngIf="jobForm.get('description')?.invalid && jobForm.get('description')?.touched" class="text-red-600 text-sm mt-1">
+          Job Description is required.
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label for="status" class="block text-sm font-medium text-gray-700">Status</label>
+        <input
+          id="status"
+          formControlName="status"
+          type="text"
+          class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+        />
+        <div *ngIf="jobForm.get('status')?.invalid && jobForm.get('status')?.touched" class="text-red-600 text-sm mt-1">
+          Status is required.
+        </div>
+      </div>
+
+      <div class="flex justify-end space-x-2">
+        <button
+          type="button"
+          (click)="close()"
+          class="bg-gray-300 text-gray-700 py-2 px-4 rounded hover:bg-gray-400"
+        >
+          Cancel
+        </button>
+        <button
+          type="submit"
+          class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+          [disabled]="jobForm.invalid"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

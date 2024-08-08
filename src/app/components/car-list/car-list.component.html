@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-2xl font-bold">{{ 'CARS' | translate }}</h2>
+    <button 
+      (click)="openAddCarModal()" 
+      class="bg-indigo-400 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
+    >
+      {{ 'ADD_CAR' | translate }}
+    </button>
+  </div>
+
+  <div class="table-container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>{{ 'ID' | translate }}</th>
+          <th>{{ 'MAKE' | translate }}</th>
+          <th>{{ 'MODEL' | translate }}</th>
+          <th>{{ 'YEAR' | translate }}</th>
+          <th>{{ 'COLOR' | translate }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let car of cars">
+          <td>{{ car.id }}</td>
+          <td>{{ car.make }}</td>
+          <td>{{ car.model }}</td>
+          <td>{{ car.year }}</td>
+          <td>{{ car.color }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <app-add-car-modal
+    [isOpen]="isModalOpen"
+    (closeModal)="closeAddCarModal()"
+    (carAdded)="onCarAdded($event)"
+  ></app-add-car-modal>
+</div>
