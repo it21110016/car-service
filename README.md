@@ -4,17 +4,17 @@ This project is a Car Service Center application featuring a front-end built wit
 
 # Technologies Used
 
-Front-End: Angular, Tailwind CSS
-Back-End: json-server (for mock REST API)
-Development Tools: Node.js, npm
+    Front-End: Angular, Tailwind CSS
+    Back-End: json-server (for mock REST API)
+    Development Tools: Node.js, npm
 
 # Packages
 
-Tailwind CSS: For styling.
-json-server: For creating a mock API for development purposes.
-Lint: For code quality and linting.
-ngx-translate/core: For internationalization (i18n) support.
-ngx-translate/http-loader: For loading translation files.
+    Tailwind CSS: For styling.
+    json-server: For creating a mock API for development purposes.
+    Lint: For code quality and linting.
+    ngx-translate/core: For internationalization (i18n) support.
+    ngx-translate/http-loader: For loading translation files.
 
 # Getting Started
 
